@@ -23,7 +23,7 @@ public class JwtService {
     @Value("${jwt.expiration}")
     private Long jwtExpirationMs;
 
-    private Key signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
+    private Key signingKey;
 
     @PostConstruct
     public void init() {
